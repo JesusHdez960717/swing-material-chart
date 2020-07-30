@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.jaga.swing.chart'
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    testCompile 'junit:junit:4.13'
+    
+    implementation project(':utils')
+    
+    implementation project(':derivable-icons')
+    implementation project(':material-standards')
+    implementation project(':material-swing')
+    
+    
+    //chart
+    compile group: 'org.jfree', name: 'jcommon', version: '1.0.24'
+    compile group: 'org.jfree', name: 'jfreechart', version: '1.0.17'
+    //compile group: 'org.jfree', name: 'jfreechart', version: '1.5.0'
+
+}
