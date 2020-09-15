@@ -32,10 +32,10 @@ import com.jhw.swing.material.standards.MaterialFontRoboto;
 public class _MaterialBarChart extends _MaterialGeneralChart implements MaterialComponent {
 
     private CategoryDataset dataset;
-    private ArrayList<BarChartCategory> category = new ArrayList<>();
-    private ArrayList<BarChartPiece> pieces = new ArrayList<>();
+    private final ArrayList<BarChartCategory> category = new ArrayList<>();
+    private final ArrayList<BarChartPiece> pieces = new ArrayList<>();
 
-    public _MaterialBarChart() {
+    protected _MaterialBarChart() {
         buildChart(pieces);
     }
 
@@ -221,7 +221,8 @@ public class _MaterialBarChart extends _MaterialGeneralChart implements Material
     }
 
     public void setCategory(ArrayList<BarChartCategory> category) {
-        this.category = category;
+        this.category.clear();
+        this.category.addAll(category);
     }
 
     public void removeAllCategories() {

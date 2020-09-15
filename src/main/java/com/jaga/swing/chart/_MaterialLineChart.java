@@ -31,7 +31,7 @@ public class _MaterialLineChart extends _MaterialGeneralChart implements Materia
     private ArrayList<LineChartSerie> series = new ArrayList<>();
     private ArrayList<LineChartPiece> pieces = new ArrayList<>();
 
-    public _MaterialLineChart() {
+    protected _MaterialLineChart() {
         buildChart(pieces);
     }
 

@@ -28,7 +28,7 @@ public abstract class _MaterialGeneralChart extends ChartPanel implements Materi
      */
     public JFreeChart chart;
 
-    public _MaterialGeneralChart() {
+    protected _MaterialGeneralChart() {
         super(null);
     }
 
