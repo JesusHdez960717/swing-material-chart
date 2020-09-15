@@ -1,9 +1,15 @@
 package com.jaga.swing.chart;
 
+import com.jhw.swing.material.components.button.MaterialButtonIcon;
 import com.jhw.swing.material.components.button.MaterialButtonsFactory;
 import com.jhw.swing.material.components.button._MaterialButtonIconTransparent;
+import com.jhw.swing.material.components.container.MaterialContainersFactory;
+import com.jhw.swing.material.components.container.layout.HorizontalLayoutContainer;
+import com.jhw.swing.material.components.container.layout.VerticalLayoutContainer;
 import com.jhw.swing.material.components.container.panel._PanelComponent;
+import com.jhw.swing.material.components.container.panel._PanelGradient;
 import com.jhw.swing.material.components.container.panel._PanelTransparent;
+import com.jhw.swing.material.standards.MaterialColors;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -17,7 +23,7 @@ import javax.swing.JPanel;
  *
  * @author Jessica Aidyl Garcia Albalah (jgarciaalbalah@gmail.com)
  */
-public class _MaterialConvertChar extends _PanelTransparent implements MaterialComponent {
+public class _MaterialConvertChar extends _PanelGradient implements MaterialComponent {
 
     private _MaterialLineChart lineChart;
     private _MaterialBarChart barChart;
@@ -32,13 +38,18 @@ public class _MaterialConvertChar extends _PanelTransparent implements MaterialC
     }
 
     private void initComponents() {
-        panelChart = MaterialContainersFactory.buildPanelComponent();
+        this.setBackground(MaterialColors.WHITE);
+
+        panelChart = MaterialContainersFactory.buildPanelGradient();
+        panelChart.setLayout(new BorderLayout());
+
         buttonBarChart = MaterialButtonsFactory.buildIconTransparent();
+        buttonBarChart.setRippleColor(MaterialColors.GREY_400);
         buttonLineChart = MaterialButtonsFactory.buildIconTransparent();
+        buttonLineChart.setRippleColor(MaterialColors.GREY_400);
 
         this.setLayout(new BorderLayout());
         this.add(panelChart);
-
         JPanel up = MaterialContainersFactory.buildPanelTransparent();
         up.setLayout(new BorderLayout());
 
@@ -46,30 +57,24 @@ public class _MaterialConvertChar extends _PanelTransparent implements MaterialC
         up.add(panelButtons, BorderLayout.EAST);
         this.add(up, BorderLayout.NORTH);
 
-        VerticalLayoutContainer.builder vlc = VerticalLayoutContainer.builder();
+        HorizontalLayoutContainer.builder vlc = HorizontalLayoutContainer.builder();
         vlc.add(buttonBarChart);
         vlc.add(buttonLineChart);
         panelButtons.add(vlc.build());
     }
 
     // Variables declaration - do not modify//:variables
-    private JButton buttonBarChart;
-    private JButton buttonLineChart;
+    private MaterialButtonIcon buttonBarChart;
+    private MaterialButtonIcon buttonLineChart;
     private JPanel panelChart;
     // End of variables declaration                   
 
     private void addListeners() {
-        buttonBarChart.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                changeToBars();
-            }
+        buttonBarChart.addActionListener((ActionEvent e) -> {
+            changeToBars();
         });
-        buttonLineChart.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                changeToLine();
-            }
+        buttonLineChart.addActionListener((ActionEvent e) -> {
+            changeToLine();
         });
         buttonBarChart.setToolTipText("Convertir a grafico de barras.");
         buttonLineChart.setToolTipText("Convertir a grafico de lineas.");
@@ -82,12 +87,14 @@ public class _MaterialConvertChar extends _PanelTransparent implements MaterialC
 
     public void changeToLine() {
         actualiceLines();
-        panelChart.setComponent(lineChart);
+        panelChart.add(lineChart);
+        revalidate();
     }
 
     public void changeToBars() {
         actualiceBars();
-        panelChart.setComponent(barChart);
+        panelChart.add(barChart);
+        revalidate();
     }
 
     public void addSerie(String serieName, Color color) {
@@ -120,10 +127,6 @@ public class _MaterialConvertChar extends _PanelTransparent implements MaterialC
 
     private void actualiceLines() {
         this.lineChart = lineChart.convertLineToBar().convertBarToLine();
-    }
-
-    public _PanelComponent getPanelChart() {
-        return panelChart;
     }
 
     public void setTitle(String title) {
