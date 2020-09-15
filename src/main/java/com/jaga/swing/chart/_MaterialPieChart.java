@@ -35,7 +35,7 @@ public class _MaterialPieChart extends _MaterialGeneralChart implements Material
     private ArrayList<PieChartPiece> pieces = new ArrayList<PieChartPiece>();
     private PieChartEnum chartEnum;
 
-    public _MaterialPieChart(PieChartEnum chartEnum) {
+    protected _MaterialPieChart(PieChartEnum chartEnum) {
         this.chartEnum = chartEnum;
         buildChart();
     }

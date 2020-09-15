@@ -28,7 +28,7 @@ public class _MaterialConvertChar extends _PanelGradient implements MaterialComp
     private _MaterialLineChart lineChart;
     private _MaterialBarChart barChart;
 
-    public _MaterialConvertChar() {
+    protected _MaterialConvertChar() {
         initComponents();
         lineChart = new _MaterialLineChart();
         barChart = new _MaterialBarChart();
