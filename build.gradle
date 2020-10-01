@@ -12,12 +12,11 @@ repositories {
 dependencies {
     testCompile 'junit:junit:4.13'
     
-    implementation project(':utils')
+    implementation project(':utils-core')
     
-    implementation project(':derivable-icons')
-    implementation project(':material-standards')
-    implementation project(':material-swing')
-    
+    implementation project(':swing-derivable_icons')
+    implementation project(':swing-material-standards')
+    implementation project(':swing-material-core')
     
     //chart
     compile group: 'org.jfree', name: 'jcommon', version: '1.0.24'
