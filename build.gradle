@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group = 'com.jaga.swing.chart'
+group = 'com.jaga.swing.material'
 
 repositories {
     jcenter()
