@@ -9,7 +9,7 @@ import org.jfree.chart.ChartPanel;
 import org.jfree.chart.ChartUtilities;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.block.BlockBorder;
-import com.jhw.swing.util.interfaces.MaterialComponent;
+import com.root101.swing.util.interfaces.MaterialComponent;
 
 /**
  *
