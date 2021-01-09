@@ -21,9 +21,9 @@ import org.jfree.chart.renderer.category.StandardBarPainter;
 import org.jfree.data.category.CategoryDataset;
 import org.jfree.data.category.DefaultCategoryDataset;
 import org.jfree.ui.RectangleInsets;
-import com.jhw.swing.util.interfaces.MaterialComponent;
-import com.jhw.swing.material.standards.MaterialColors;
-import com.jhw.swing.material.standards.MaterialFontRoboto;
+import com.root101.swing.util.interfaces.MaterialComponent;
+import com.root101.swing.material.standards.MaterialColors;
+import com.root101.swing.material.standards.MaterialFontRoboto;
 
 /**
  *

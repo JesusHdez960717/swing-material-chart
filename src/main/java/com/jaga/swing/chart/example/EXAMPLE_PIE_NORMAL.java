@@ -4,11 +4,11 @@ import com.jaga.swing.chart.PieChartEnum;
 import com.jaga.swing.chart._MaterialConvertChar;
 import com.jaga.swing.chart._MaterialLineChart;
 import com.jaga.swing.chart._MaterialPieChart;
-import com.jhw.swing.material.components.container.MaterialContainersFactory;
+import com.root101.swing.material.components.container.MaterialContainersFactory;
 import javax.swing.JPanel;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
-import com.jhw.swing.ui.MaterialLookAndFeel;
+import com.root101.swing.ui.MaterialLookAndFeel;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.util.Random;
@@ -49,20 +49,20 @@ public class EXAMPLE_PIE_NORMAL extends javax.swing.JFrame {
 
     private JPanel panelBack;
 
-public class PIE_NORMAL_CHART extends _MaterialPieChart {
+    public class PIE_NORMAL_CHART extends _MaterialPieChart {
 
-    public PIE_NORMAL_CHART() {
-        super(PieChartEnum.NORMAL);
-        int maxBars = 10;
-        Random r = new Random();
-        for (int i = 0; i < maxBars; i++) {
-            addPiece("name " + r.nextInt(1000), r.nextInt(100), new Color(r.nextInt()));
+        public PIE_NORMAL_CHART() {
+            super(PieChartEnum.NORMAL);
+            int maxBars = 10;
+            Random r = new Random();
+            for (int i = 0; i < maxBars; i++) {
+                addPiece("name " + r.nextInt(1000), r.nextInt(100), new Color(r.nextInt()));
+            }
+            //--------------------------------------------------------
+
+            this.getChart().setTitle("Nombre del grafico de pie");
         }
-        //--------------------------------------------------------
 
-        this.getChart().setTitle("Nombre del grafico de pie");
     }
-
-}
 
 }
