@@ -2,11 +2,11 @@ package com.jaga.swing.chart.example;
 
 import com.jaga.swing.chart._MaterialConvertChar;
 import com.jaga.swing.chart._MaterialLineChart;
-import com.jhw.swing.material.components.container.MaterialContainersFactory;
+import com.root101.swing.material.components.container.MaterialContainersFactory;
 import javax.swing.JPanel;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
-import com.jhw.swing.ui.MaterialLookAndFeel;
+import com.root101.swing.ui.MaterialLookAndFeel;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.util.Random;

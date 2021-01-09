@@ -17,9 +17,9 @@ import org.jfree.chart.plot.XYPlot;
 import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
-import com.jhw.swing.util.interfaces.MaterialComponent;
-import com.jhw.swing.material.standards.MaterialColors;
-import com.jhw.swing.material.standards.MaterialFontRoboto;
+import com.root101.swing.util.interfaces.MaterialComponent;
+import com.root101.swing.material.standards.MaterialColors;
+import com.root101.swing.material.standards.MaterialFontRoboto;
 
 /**
  *

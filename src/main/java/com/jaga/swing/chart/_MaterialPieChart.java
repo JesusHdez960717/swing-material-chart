@@ -20,9 +20,9 @@ import org.jfree.data.general.PieDataset;
 import org.jfree.ui.RectangleEdge;
 import org.jfree.util.Rotation;
 import com.jaga.swing.chart.PieChartEnum;
-import com.jhw.swing.util.interfaces.MaterialComponent;
-import com.jhw.swing.material.standards.MaterialColors;
-import com.jhw.swing.material.standards.MaterialFontRoboto;
+import com.root101.swing.util.interfaces.MaterialComponent;
+import com.root101.swing.material.standards.MaterialColors;
+import com.root101.swing.material.standards.MaterialFontRoboto;
 
 /**
  *
